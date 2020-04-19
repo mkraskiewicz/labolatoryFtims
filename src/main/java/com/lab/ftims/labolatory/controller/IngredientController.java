@@ -37,31 +37,6 @@ public class IngredientController {
         Long.valueOf(recipeId),Long.valueOf(ingredientId));
   }
 
-//  @GetMapping("/recipe/{recipeId}/ingredient/new")
-//  public String newRecipe(@PathVariable String recipeId){
-//
-//    Recipe recipe = recipeService.findRecipeById(Long.valueOf(recipeId));
-//    Ingredient ingredient = new Ingredient();
-//    ingredient.getRecipe().setId(Long.valueOf(recipeId));
-//    model.addAttribute("ingredient", ingredientCommand);
-//
-//    ingredientCommand.setUom(new UnitOfMeasureCommand());
-//    model.addAttribute("uomList", unitOfMeasureService.listAllUoms());
-//
-//    return "/recipe/ingredient/ingredientform";
-//  }
-
-//  @GetMapping("/recipe/{recipeId}/ingredient/{ingredientId}/update")
-//  public String updateIngredient(@PathVariable String recipeId, @PathVariable String ingredientId, Model model){
-//    log.debug("Updating Ingredient");
-//
-//    model.addAttribute("ingredient", ingredientService.getByRecipeIdAndIngredientId(
-//        Long.valueOf(recipeId), Long.valueOf(ingredientId)));
-//    model.addAttribute("uomList", unitOfMeasureService.listAllUoms());
-//
-//    return "/recipe/ingredient/ingredientform";
-//  }
-
   @DeleteMapping("/recipe/{recipeId}/ingredient/{ingredientId}/delete")
   public boolean deleteIngredient(@PathVariable String recipeId, @PathVariable String ingredientId){
 
