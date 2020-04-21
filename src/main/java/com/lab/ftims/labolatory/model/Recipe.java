@@ -21,6 +21,9 @@ public class Recipe {
   private int prepTime;
   private int servings;
 
+  @Lob
+  private String directions;
+
   @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
   private Set<Ingredient> ingredients = new HashSet<>();
 
